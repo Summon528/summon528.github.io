@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#34495e">
+  <title>水泥城式</title>
+  <link rel="alternate" href="path/of/rss" type="application/atom+xml">
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/awesomplete.css">
+  
+
+  
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108414747-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108414747-2');
+    </script>
+
+
+
+  
+
+  
+
+</head>
+
+<body>
+  <div class="mobile-header">
+    <span><i class="far fa-dot-circle" id="mobile-nav-toggle"></i></span>
+    <div class="mobile-logo">
+      <a href="/.">Concrete</a>
+    </div>
+  </div>
+  <div class="page" id="mobile-nav-panel">
+    <div class="container">
+      <header class="site-nav">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="/">Concrete</a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li style="margin:0;">
+              <input placeholder="Search" onclick="initSearch();" id="search">
+            </li>
+            
+                
+                <li class="menu-item">
+                  <a href="/" class="menu-item-link"><i class="fas fa-home"></i>首頁</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/archives" class="menu-item-link"><i class="fas fa-archive"></i>列表</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/tags" class="menu-item-link"><i class="fas fa-tags"></i>標籤</a>
+                </li>
+              
+            
+              
+                <li class="menu-item">
+                  <a href="/about" class="menu-item-link"><i class="fas fa-info-circle"></i>關於</a>
+                </li>
+              
+            
+          </ul>
+        </nav>
+      </div>
+</header>
+
+      <div class="banner">
+  <div class="show">
+    <!-- <img src="/" alt="banner"> -->
+    <div class="banner-title">
+      
+        <div class="intro">
+          practice makes perfect
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+      <main class="main"id="main">
+          <section class="posts">
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/11/06/UVA-10341-Solve-It/">[UVA] 10341 - Solve It</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-11-06</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1282" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1282</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>求 $p \times e^{-x} + q \times sin(x) + r \times cos(x) + s \times tan(x) + t \times x^2 + u = 0$ 在 $ 0 \leq x \leq 1 $的解<br>且輸入保證 $ 0 \leq p, r \leq 20 $、$ -20 \leq q, s, t \leq 0 $</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>原方程式微分後得到<br>$ -pe^{-x} + q \cdot cos(x) + (-r \cdot sin(x)) + s \cdot sec^2(x) + 2tx $<br>根據題目的限制，導函數永遠$\leq 0$，原函數是遞減函數<br>題目還給了$x$的範圍，直接二分搜答案<br>
+          <div id="read-more">
+            <a href="/2017/11/06/UVA-10341-Solve-It/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/BinarySearch/">BinarySearch</a> <a class="tag-link" href="/tags/Math/">Math</a> <a class="tag-link" href="/tags/Python/">Python</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/11/03/UVA-12455-Bars/">[UVA] 12455 - Bars</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-11-03</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3886" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3886</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>待補</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>待補<br>
+          <div id="read-more">
+            <a href="/2017/11/03/UVA-12455-Bars/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Python/">Python</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/11/03/UVA-1203-Argus/">[UVA] 1203 - Argus</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-11-03</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3644" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3644</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>待補</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>待補<br>
+          <div id="read-more">
+            <a href="/2017/11/03/UVA-1203-Argus/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/11/03/UVA-12192-Grapevine/">[UVA] 12192 - Grapevine</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-11-03</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3344" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3344</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>待補</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>待補<br>
+          <div id="read-more">
+            <a href="/2017/11/03/UVA-12192-Grapevine/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/11/03/UVA-11057-Exact-Sum/">[UVA] 11057 - Exact Sum</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-11-03</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1998" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1998</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>待補</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>待補<br>
+          <div id="read-more">
+            <a href="/2017/11/03/UVA-11057-Exact-Sum/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Python/">Python</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/11/02/UVA-10567-Helping-Fill-Bates/">[UVA] 10567 - Helping Fill Bates</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-11-02</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1508" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1508</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>待補</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>待補<br>
+          <div id="read-more">
+            <a href="/2017/11/02/UVA-10567-Helping-Fill-Bates/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/11/01/UVA-1262-Password/">[UVA] 1262 - Password</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-11-01</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3703" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3703</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>待補</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>待補<br>
+          <div id="read-more">
+            <a href="/2017/11/01/UVA-1262-Password/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Python/">Python</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/11/01/UVA-416-LED-Test/">[UVA] 416 - LED Test</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-11-01</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=357" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=357</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>待補</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>待補<br>
+          <div id="read-more">
+            <a href="/2017/11/01/UVA-416-LED-Test/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Python/">Python</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/11/01/UVA-193-Graph-Coloring/">[UVA] 193 - Graph Coloring</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-11-01</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=129" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=129</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>待補</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>待補<br>
+          <div id="read-more">
+            <a href="/2017/11/01/UVA-193-Graph-Coloring/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/10/31/UVA-10503-The-dominoes-solitaire/">[UVA] 10503 - The dominoes solitaire</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-10-31</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1444" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1444</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>待補</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>待補<br>
+          <div id="read-more">
+            <a href="/2017/10/31/UVA-10503-The-dominoes-solitaire/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+</section>
+
+          
+     <nav class="pagination">
+    
+      <a href="/page/6/">
+        <span class="prev"><i class="fas fa-angle-left"></i>上一頁</span>
+      </a>
+    
+    
+      <a href="/page/8/">
+        <span class="next">下一頁<i class="fas fa-angle-right"></i></span>
+      </a>
+    
+  </nav>
+
+
+          
+
+      </main>
+    </div>
+    <footer>
+      <div class="social-links">
+        
+          
+        
+          
+        
+          
+            <a href="https://github.com/summon528"><i class="fab fa-github"></i></a>
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.facebook.com/ChangYenTseng"><i class="fab fa-facebook"></i></a>
+          
+        
+          
+            <a href="https://twitter.com/summon528"><i class="fab fa-twitter"></i></a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.reddit.com/user/Summon528/"><i class="fab fa-reddit"></i></a>
+          
+        
+        
+          <a href="/atom.xml"><i class="fas fa-rss"></i></a>
+        
+      </div>
+      
+        <div class="quote">
+          <p>我肚子餓了，我想要去吃宵夜. ——睦樂 李</p>
+        </div>
+      
+      <div class="copyright">
+        <p>
+          由 <a href="https://hexo.io/">Hexo</a> 強力驅動
+          <span>|</span>
+          主題 - <a href="https://github.com/wa-ri/hexo-theme-ztopic">ztopic</a
+        </p>
+        <p>
+          <span>
+          
+          &copy;
+          
+            2018
+          
+          </span>
+          <i class="fas fa-circle"></i>
+          <span>Cody Tseng</span>
+        </p>
+      </div>
+</footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="fas fa-angle-double-up"></i>
+    </div>
+  </div>
+  <div id="mobile-nav">
+  <nav id="mobile-nav-menu">
+    <div class="awesomplete">
+      <input placeholder="Search" onclick="initSearch();" id="mobile-search" autocomplete="off" aria-owns="awesomplete_list_1" role="combobox">
+      <ul role="listbox" id="awesomplete_list_1" hidden=""></ul>
+    </div>
+    
+        
+        <li class="menu-item">
+          <a href="/" class="mobile-nav-link"><i class="fas fa-home"></i>首頁</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/archives" class="mobile-nav-link"><i class="fas fa-archive"></i>列表</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/tags" class="mobile-nav-link"><i class="fas fa-tags"></i>標籤</a>
+        </li>
+      
+    
+      
+        <li class="menu-item">
+          <a href="/about" class="mobile-nav-link"><i class="fas fa-info-circle"></i>關於</a>
+        </li>
+      
+    
+    <div class="mobile-intro">practice makes perfect</div>
+  </nav>
+</div>
+
+
+  <script src="/libs/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="/libs/slideout/slideout.min.js"></script>
+  
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css">
+    <script src="/libs/fancybox/jquery.fancybox.pack.js"></script>
+  
+  
+
+  <script src="/js/ztopic.js"></script>
+  <script src="/js/concrete.js"></script>
+  <script src="/js/awesomplete.js"></script>
+  <script src="/js/copy.js"></script>
+</body>
+</html>

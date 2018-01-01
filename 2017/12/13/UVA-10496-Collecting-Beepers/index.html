@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#34495e">
+  <title>[UVA] 10496 - Collecting Beepers | 水泥城式</title>
+  <link rel="alternate" href="path/of/rss" type="application/atom+xml">
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/awesomplete.css">
+  
+
+  
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108414747-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108414747-2');
+    </script>
+
+
+
+  
+
+  
+
+</head>
+
+<body>
+  <div class="mobile-header">
+    <span><i class="far fa-dot-circle" id="mobile-nav-toggle"></i></span>
+    <div class="mobile-logo">
+      <a href="/.">Concrete</a>
+    </div>
+  </div>
+  <div class="page" id="mobile-nav-panel">
+    <div class="container">
+      <header class="site-nav">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="/">Concrete</a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li style="margin:0;">
+              <input placeholder="Search" onclick="initSearch();" id="search">
+            </li>
+            
+                
+                <li class="menu-item">
+                  <a href="/" class="menu-item-link"><i class="fas fa-home"></i>首頁</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/archives" class="menu-item-link"><i class="fas fa-archive"></i>列表</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/tags" class="menu-item-link"><i class="fas fa-tags"></i>標籤</a>
+                </li>
+              
+            
+              
+                <li class="menu-item">
+                  <a href="/about" class="menu-item-link"><i class="fas fa-info-circle"></i>關於</a>
+                </li>
+              
+            
+          </ul>
+        </nav>
+      </div>
+</header>
+
+      <div class="banner">
+  <div class="show">
+    <!-- <img src="/" alt="banner"> -->
+    <div class="banner-title">
+      
+        <div class="post-title">
+          [UVA] 10496 - Collecting Beepers
+            <div class="post-tags">
+    		    
+              <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/DP/">DP</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+            
+    	      </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+      <main class="main"id="main">
+          <article class="post">
+  
+
+  <header>
+    <div class="post-title mobile-post-title">
+      <h1>[UVA] 10496 - Collecting Beepers</h1>
+        <div class="post-tags">
+        
+          <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/DP/">DP</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+        
+        </div>
+    </div>
+    <div class="post-meta">
+      <span class="post-time"><i class="fas fa-calendar"></i>2017-12-13</span>
+      
+      <!----------------------------------->
+        
+      <!----------------------------------->
+    </div>
+  </header>
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">目錄</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#出處"><span class="toc-text">出處</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#題意"><span class="toc-text">題意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#程式碼"><span class="toc-text">程式碼</span></a></li></ol>
+    </div>
+  </div>
+
+
+  <div class="post-content">
+    <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1437" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1437</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給定一個起點<br>再給一坨點<br>問從起點經過所有點回到起點的最短距離<br>只能上下左右走，不能斜的走  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>TSP問題 狀壓DP  <a id="more"></a><br>用一個mask儲存各點遍歷過的狀態<br>以3點為例 111代表所有點都走過 110代表第0點沒走過其餘都走過…<br><code>dp[x][msk]</code> 代表以x為終點，當前狀態為msk，最短纜線總和的值<br><code>dp[x][(1 &lt;&lt; N - 1)]</code> (<code>dp[x][全部都是一]</code>) 答案為x回到起點的距離<br> 以x為終點，且所有點都已經走過，這種情況直接殺回起點，值設為x回到起點的距離<br>每詢問一次dp[x][msk]，枚舉所有能接在x後的點k(dp[k][msk | 1 &lt;&lt; k])<br>滿足<code>msk &amp; (1 &lt;&lt; k) == false</code> (確保k沒有被走過)<br>最後<code>dp[x][msk]</code>就會是所有<code>dp[k][(msk | 1 &lt;&lt; k)]</code>中最小的<br>答案最後存在<code>dp[0][1]</code><br>最後枚舉所有終點，找出最小的方法，並列印答案<br>複雜度$O(N^2 \times 2^N)$</p>
+<h3 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;utility&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 1000000000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">dist</span><span class="params">(pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; a, pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">abs</span>(a.first - b.first) + <span class="built_in">abs</span>(a.second - b.second);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">tsp</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> msk, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; dp, <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt;&amp; vp)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (dp[x][msk] != INF) <span class="keyword">return</span> dp[x][msk];</span><br><span class="line">    <span class="keyword">if</span> (msk == (<span class="number">1</span> &lt;&lt; vp.size()) - <span class="number">1</span>) <span class="keyword">return</span> dist(vp[<span class="number">0</span>], vp[x]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; vp.size(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i != x &amp;&amp; !((<span class="number">1</span> &lt;&lt; i) &amp; msk)) &#123;</span><br><span class="line">            dp[x][msk] = min(dp[x][msk], dist(vp[x], vp[i]) +</span><br><span class="line">                                             tsp(i, msk | (<span class="number">1</span> &lt;&lt; i), dp, vp));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[x][msk];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span> (T--) &#123;</span><br><span class="line">        <span class="keyword">int</span> xs, ys, t1, t2, n;</span><br><span class="line">        <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt; vp;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; xs &gt;&gt; ys &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        vp.push_back(make_pair(t1, t2));</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">            vp.push_back(make_pair(t1, t2));</span><br><span class="line">        &#125;</span><br><span class="line">        n += <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; dp(n, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(<span class="number">1</span> &lt;&lt; n, INF));</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"The shortest path has length "</span> &lt;&lt; tsp(<span class="number">0</span>, <span class="number">1</span>, dp, vp) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+  </div>
+  <div class="post-footer">the end</div>
+</article>
+
+          
+  <nav class="pagination post-nav">
+    
+      <a href="/2017/12/13/UVA-11284-Shopping-Trip/">
+        <span class="prev-post"><i class="fas fa-angle-left"></i>[UVA] 11284 - Shopping Trip</span>
+      </a>
+    
+    
+      <a href="/2017/12/11/UVA-216-Getting-in-Line/">
+        <span class="next-post">[UVA] 216 - Getting in Line<i class="fas fa-angle-right"></i></span>
+      </a>
+    
+  </nav>
+
+
+          
+  
+  <div id="disqus_thread"></div>
+<script>
+    var shortName = 'summon528'
+    var disqus_config = function () {
+     this.page.url = 'https://summon528.github.io/2017/12/13/UVA-10496-Collecting-Beepers/';  // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = 'post'+'-2017/12/13/UVA-10496-Collecting-Beepers/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//'+shortName+'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<script id="dsq-count-scr" src="//summon528.disqus.com/count.js" async></script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+
+      </main>
+    </div>
+    <footer>
+      <div class="social-links">
+        
+          
+        
+          
+        
+          
+            <a href="https://github.com/summon528"><i class="fab fa-github"></i></a>
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.facebook.com/ChangYenTseng"><i class="fab fa-facebook"></i></a>
+          
+        
+          
+            <a href="https://twitter.com/summon528"><i class="fab fa-twitter"></i></a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.reddit.com/user/Summon528/"><i class="fab fa-reddit"></i></a>
+          
+        
+        
+          <a href="/atom.xml"><i class="fas fa-rss"></i></a>
+        
+      </div>
+      
+        <div class="quote">
+          <p>我肚子餓了，我想要去吃宵夜. ——睦樂 李</p>
+        </div>
+      
+      <div class="copyright">
+        <p>
+          由 <a href="https://hexo.io/">Hexo</a> 強力驅動
+          <span>|</span>
+          主題 - <a href="https://github.com/wa-ri/hexo-theme-ztopic">ztopic</a
+        </p>
+        <p>
+          <span>
+          
+          &copy;
+          
+            2018
+          
+          </span>
+          <i class="fas fa-circle"></i>
+          <span>Cody Tseng</span>
+        </p>
+      </div>
+</footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="fas fa-angle-double-up"></i>
+    </div>
+  </div>
+  <div id="mobile-nav">
+  <nav id="mobile-nav-menu">
+    <div class="awesomplete">
+      <input placeholder="Search" onclick="initSearch();" id="mobile-search" autocomplete="off" aria-owns="awesomplete_list_1" role="combobox">
+      <ul role="listbox" id="awesomplete_list_1" hidden=""></ul>
+    </div>
+    
+        
+        <li class="menu-item">
+          <a href="/" class="mobile-nav-link"><i class="fas fa-home"></i>首頁</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/archives" class="mobile-nav-link"><i class="fas fa-archive"></i>列表</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/tags" class="mobile-nav-link"><i class="fas fa-tags"></i>標籤</a>
+        </li>
+      
+    
+      
+        <li class="menu-item">
+          <a href="/about" class="mobile-nav-link"><i class="fas fa-info-circle"></i>關於</a>
+        </li>
+      
+    
+    <div class="mobile-intro">practice makes perfect</div>
+  </nav>
+</div>
+
+
+  <script src="/libs/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="/libs/slideout/slideout.min.js"></script>
+  
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css">
+    <script src="/libs/fancybox/jquery.fancybox.pack.js"></script>
+  
+  
+
+  <script src="/js/ztopic.js"></script>
+  <script src="/js/concrete.js"></script>
+  <script src="/js/awesomplete.js"></script>
+  <script src="/js/copy.js"></script>
+</body>
+</html>

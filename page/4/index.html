@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#34495e">
+  <title>水泥城式</title>
+  <link rel="alternate" href="path/of/rss" type="application/atom+xml">
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/awesomplete.css">
+  
+
+  
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108414747-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108414747-2');
+    </script>
+
+
+
+  
+
+  
+
+</head>
+
+<body>
+  <div class="mobile-header">
+    <span><i class="far fa-dot-circle" id="mobile-nav-toggle"></i></span>
+    <div class="mobile-logo">
+      <a href="/.">Concrete</a>
+    </div>
+  </div>
+  <div class="page" id="mobile-nav-panel">
+    <div class="container">
+      <header class="site-nav">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="/">Concrete</a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li style="margin:0;">
+              <input placeholder="Search" onclick="initSearch();" id="search">
+            </li>
+            
+                
+                <li class="menu-item">
+                  <a href="/" class="menu-item-link"><i class="fas fa-home"></i>首頁</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/archives" class="menu-item-link"><i class="fas fa-archive"></i>列表</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/tags" class="menu-item-link"><i class="fas fa-tags"></i>標籤</a>
+                </li>
+              
+            
+              
+                <li class="menu-item">
+                  <a href="/about" class="menu-item-link"><i class="fas fa-info-circle"></i>關於</a>
+                </li>
+              
+            
+          </ul>
+        </nav>
+      </div>
+</header>
+
+      <div class="banner">
+  <div class="show">
+    <!-- <img src="/" alt="banner"> -->
+    <div class="banner-title">
+      
+        <div class="intro">
+          practice makes perfect
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+      <main class="main"id="main">
+          <section class="posts">
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/11/UVA-216-Getting-in-Line/">[UVA] 216 - Getting in Line</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-11</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=152" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=152</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給定一張圖，求最短、一條線連接所有的點<br>(每個點只能接兩條邊、非最小生成樹)<br>注意距離要+16(纜線從地底到地上的距離)  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>TSP問題  狀壓DP
+          <div id="read-more">
+            <a href="/2017/12/11/UVA-216-Getting-in-Line/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/DP/">DP</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/11/UVA-11517-Exact-Change/">[UVA] 11517 - Exact Change</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-11</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2512" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2512</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給定一個價格P，給定n種硬幣<br>問用湊出&gt;=P且最接近P的硬幣數和付出的總價<br>若付出的總價相同則硬幣數量越小越好<br>每種硬幣只能用一次</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>DP 類似01背包
+          <div id="read-more">
+            <a href="/2017/12/11/UVA-11517-Exact-Change/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/DP/">DP</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/11/UVA-10306-e-Coins/">[UVA] 10306 - e-Coins</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-11</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1247" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1247</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給定m個硬幣，每種硬幣有兩個值conventional value和InfoTechnological value<br>求使用最少硬幣，且滿足 $S = \sqrt{C^2+I^2}$的硬幣數量<br>其中C代表選擇的所有硬幣的conventional value總和<br>I代表代表選擇的所有硬幣的value和InfoTechnological value總和<br>硬幣不限次數</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>二維DP 無限背包
+          <div id="read-more">
+            <a href="/2017/12/11/UVA-10306-e-Coins/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/DP/">DP</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/07/UVA-357-Let-Me-Count-The-Ways/">[UVA] 357 - Let Me Count The Ways</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-07</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=293" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=293</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>有 1、5、10、25、50 分的硬幣<br>求組合出n元有幾個方法  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>DP <code>dp[j]</code> 存組成j元的方法數  <code>coins[i]</code>硬幣種類<br><code>dp[j] += dp[j - coins[i]];</code><br>注意 long long<br>python 又會TLE  QAQ<br>
+          <div id="read-more">
+            <a href="/2017/12/07/UVA-357-Let-Me-Count-The-Ways/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/DP/">DP</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/07/UVA-11566-Let-s-Yum-Cha/">[UVA] 11566 - Let&#39;s Yum Cha!</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-07</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2613" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2613</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>中文題目 <a href="http://unfortunatedog.blogspot.tw/2013/07/11566-lets-yum-cha_23.html" target="_blank" rel="noopener">http://unfortunatedog.blogspot.tw/2013/07/11566-lets-yum-cha_23.html</a><br>佛心網站╭(⊙Д⊙)╯佛心網站╰(⊙Д⊙)╮  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>先計算扣掉茶費、手續費後的預算<br>每個東西可以用兩次，所以每樣東西都塞兩個到vector裡<br><code>dp[j][k]</code>代表選了j盤點心，總價格為k元的數量<br>枚舉點心種類、選擇數量、價格總和<br>轉移式<br><code>dp[j][k] = max(dp[j - 1][k - price[i]] + favor[i], dp[j - 1][k], dp[j][k])</code><br>最後跑for看選$2 \times (N+1)$、且在預算內最大的方法數<br>注意 除1.1會有浮點數誤差<br>注意 茶費的部分也要算服務費<br>
+          <div id="read-more">
+            <a href="/2017/12/07/UVA-11566-Let-s-Yum-Cha/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/DP/">DP</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/07/UVA-11789-Texas-Hold-em-Poker-Solitaire/">[UVA] 11789 - Texas Hold&#39;em Poker Solitaire</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-07</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=nlinejudge&amp;category=117&amp;page=show_problem&amp;problem=2889" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=nlinejudge&amp;category=117&amp;page=show_problem&amp;problem=2889</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給一個7*7的矩陣<br>每條直線，橫線、對角線的7張中，尋找能產生最大手牌的5張<br>求最大的線是哪一條，和那5張牌是什麼  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>暴力枚舉所有直線，橫線、對角線<br>在暴力枚舉7張中不要的兩張<br>輸出最大的，注意輸出的順序不要亂掉<br>
+          <div id="read-more">
+            <a href="/2017/12/07/UVA-11789-Texas-Hold-em-Poker-Solitaire/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/Texas/">Texas</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/07/UVA-131-The-Psychic-Poker-Player/">[UVA] 131 - The Psychic Poker Player</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-07</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=67" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=67</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給定5張手牌，5張牌庫牌<br>可以棄掉自己手上n張牌，從牌庫頂端拿n張<br>求最大的  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>狀態壓縮，暴力解<br>
+          <div id="read-more">
+            <a href="/2017/12/07/UVA-131-The-Psychic-Poker-Player/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/CompleteSearch/">CompleteSearch</a> <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/Texas/">Texas</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/07/UVA-10315-Poker-Hands/">[UVA] 10315 - Poker Hands</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-07</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1256" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1256</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給兩個人的手牌，問誰的比較大  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>剛好做了個跟德州撲克有關的class<br>只好隨便A幾題UVA<br>
+          <div id="read-more">
+            <a href="/2017/12/07/UVA-10315-Poker-Hands/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/Texas/">Texas</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/07/UVA-10819-Trouble-of-13-Dots/">[UVA] 10819 - Trouble of 13-Dots</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-07</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1760" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1760</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給一堆商品的喜好程度及價錢<br>求在預算下能夠獲得的最大喜好程度總和<br>滿2000時可以折價200元  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>背包問題的變形<br>直接把預算加上200元<br>dp[i]求<strong>剛好</strong>花i塊錢能獲得的最大喜好程度<br>最後跑一圈for看預算內最大喜好程度如何<br>這個方法可以解決下面那種奇怪的狀況<br>
+          <div id="read-more">
+            <a href="/2017/12/07/UVA-10819-Trouble-of-13-Dots/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/DP/">DP</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+    <article class="post" id="post-excerpt">
+      <header>
+        <div class="post-title">
+          <h1><a class="post-title-link" href="/2017/12/05/UVA-10616-Divisible-Group-Sums/">[UVA] 10616 Divisible Group Sums</a></h1>
+        </div>
+        <div class="post-meta">
+          <span class="post-time"><i class="fas fa-calendar"></i>2017-12-05</span>
+          
+          <!---------------------------------------->
+            
+        <!----------------------------------------->
+        </div>
+      </header>
+      <div class="post-content">
+        <!-------------->
+        
+          <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1557" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1557</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給一拖拉庫數字<br>問從一拖拉庫數字取M個總和可以被D整除的有幾個  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>將一拖拉庫數字每個都%D<br>全部總和最大是$N \times D$，以這個當背包大小<br>枚舉所有數字、取的數量、總和<br><code>dp[i][j]</code>  代表取j個總和是i<br>初始條件<code>dp[0][0]</code><br>轉移<code>dp[v][m] += dp[v - data2[n]][m - 1]</code><br>(取m個總和是v數量 += 取m-1個總和是v - 自己這個數字)<br>
+          <div id="read-more">
+            <a href="/2017/12/05/UVA-10616-Divisible-Group-Sums/">閱讀更多</a>
+          </div>
+        
+        <!-------------->
+      </div>
+      <div class="post-tags">
+      
+        <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/DP/">DP</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+      
+    </div>
+    </article>
+  
+</section>
+
+          
+     <nav class="pagination">
+    
+      <a href="/page/3/">
+        <span class="prev"><i class="fas fa-angle-left"></i>上一頁</span>
+      </a>
+    
+    
+      <a href="/page/5/">
+        <span class="next">下一頁<i class="fas fa-angle-right"></i></span>
+      </a>
+    
+  </nav>
+
+
+          
+
+      </main>
+    </div>
+    <footer>
+      <div class="social-links">
+        
+          
+        
+          
+        
+          
+            <a href="https://github.com/summon528"><i class="fab fa-github"></i></a>
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.facebook.com/ChangYenTseng"><i class="fab fa-facebook"></i></a>
+          
+        
+          
+            <a href="https://twitter.com/summon528"><i class="fab fa-twitter"></i></a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.reddit.com/user/Summon528/"><i class="fab fa-reddit"></i></a>
+          
+        
+        
+          <a href="/atom.xml"><i class="fas fa-rss"></i></a>
+        
+      </div>
+      
+        <div class="quote">
+          <p>我肚子餓了，我想要去吃宵夜. ——睦樂 李</p>
+        </div>
+      
+      <div class="copyright">
+        <p>
+          由 <a href="https://hexo.io/">Hexo</a> 強力驅動
+          <span>|</span>
+          主題 - <a href="https://github.com/wa-ri/hexo-theme-ztopic">ztopic</a
+        </p>
+        <p>
+          <span>
+          
+          &copy;
+          
+            2018
+          
+          </span>
+          <i class="fas fa-circle"></i>
+          <span>Cody Tseng</span>
+        </p>
+      </div>
+</footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="fas fa-angle-double-up"></i>
+    </div>
+  </div>
+  <div id="mobile-nav">
+  <nav id="mobile-nav-menu">
+    <div class="awesomplete">
+      <input placeholder="Search" onclick="initSearch();" id="mobile-search" autocomplete="off" aria-owns="awesomplete_list_1" role="combobox">
+      <ul role="listbox" id="awesomplete_list_1" hidden=""></ul>
+    </div>
+    
+        
+        <li class="menu-item">
+          <a href="/" class="mobile-nav-link"><i class="fas fa-home"></i>首頁</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/archives" class="mobile-nav-link"><i class="fas fa-archive"></i>列表</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/tags" class="mobile-nav-link"><i class="fas fa-tags"></i>標籤</a>
+        </li>
+      
+    
+      
+        <li class="menu-item">
+          <a href="/about" class="mobile-nav-link"><i class="fas fa-info-circle"></i>關於</a>
+        </li>
+      
+    
+    <div class="mobile-intro">practice makes perfect</div>
+  </nav>
+</div>
+
+
+  <script src="/libs/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="/libs/slideout/slideout.min.js"></script>
+  
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css">
+    <script src="/libs/fancybox/jquery.fancybox.pack.js"></script>
+  
+  
+
+  <script src="/js/ztopic.js"></script>
+  <script src="/js/concrete.js"></script>
+  <script src="/js/awesomplete.js"></script>
+  <script src="/js/copy.js"></script>
+</body>
+</html>

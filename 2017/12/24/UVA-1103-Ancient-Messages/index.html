@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#34495e">
+  <title>[UVA] 1103 - Ancient Messages | 水泥城式</title>
+  <link rel="alternate" href="path/of/rss" type="application/atom+xml">
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/awesomplete.css">
+  
+
+  
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108414747-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108414747-2');
+    </script>
+
+
+
+  
+
+  
+
+</head>
+
+<body>
+  <div class="mobile-header">
+    <span><i class="far fa-dot-circle" id="mobile-nav-toggle"></i></span>
+    <div class="mobile-logo">
+      <a href="/.">Concrete</a>
+    </div>
+  </div>
+  <div class="page" id="mobile-nav-panel">
+    <div class="container">
+      <header class="site-nav">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="/">Concrete</a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li style="margin:0;">
+              <input placeholder="Search" onclick="initSearch();" id="search">
+            </li>
+            
+                
+                <li class="menu-item">
+                  <a href="/" class="menu-item-link"><i class="fas fa-home"></i>首頁</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/archives" class="menu-item-link"><i class="fas fa-archive"></i>列表</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/tags" class="menu-item-link"><i class="fas fa-tags"></i>標籤</a>
+                </li>
+              
+            
+              
+                <li class="menu-item">
+                  <a href="/about" class="menu-item-link"><i class="fas fa-info-circle"></i>關於</a>
+                </li>
+              
+            
+          </ul>
+        </nav>
+      </div>
+</header>
+
+      <div class="banner">
+  <div class="show">
+    <!-- <img src="/" alt="banner"> -->
+    <div class="banner-title">
+      
+        <div class="post-title">
+          [UVA] 1103 - Ancient Messages
+            <div class="post-tags">
+    		    
+              <a class="tag-link" href="/tags/BFS/">BFS</a> <a class="tag-link" href="/tags/Graph/">Graph</a> <a class="tag-link" href="/tags/Python/">Python</a>
+            
+    	      </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+      <main class="main"id="main">
+          <article class="post">
+  
+
+  <header>
+    <div class="post-title mobile-post-title">
+      <h1>[UVA] 1103 - Ancient Messages</h1>
+        <div class="post-tags">
+        
+          <a class="tag-link" href="/tags/BFS/">BFS</a> <a class="tag-link" href="/tags/Graph/">Graph</a> <a class="tag-link" href="/tags/Python/">Python</a>
+        
+        </div>
+    </div>
+    <div class="post-meta">
+      <span class="post-time"><i class="fas fa-calendar"></i>2017-12-24</span>
+      
+      <!----------------------------------->
+        
+      <!----------------------------------->
+    </div>
+  </header>
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">目錄</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#出處"><span class="toc-text">出處</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#題意"><span class="toc-text">題意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#程式碼"><span class="toc-text">程式碼</span></a></li></ol>
+    </div>
+  </div>
+
+
+  <div class="post-content">
+    <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3544" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3544</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>識別每個圖案各有幾個</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>注意到每個圖案内的白色區塊分別是0~5個<br>先把16進位解壓成01二位陣列後（外面要包一圈0以保證背景聯通）<br>用BFS將背景都該成大便圖案💩<br>之後枚舉每個點，若是1則BFS將他們改成漢堡圖案🍔<br>在進行以上步驟的時候，如果遇到0則也把他們塗成大便並記錄數量<br><a id="more"></a></p>
+<h3 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bfs_fill</span><span class="params">(x, y, curr, change_to, graph, visit, bg=False)</span>:</span></span><br><span class="line">    dq = deque([(x, y)])</span><br><span class="line">    visit[x][y] = <span class="keyword">True</span></span><br><span class="line">    graph[x][y] = change_to</span><br><span class="line">    dxy = ((<span class="number">1</span>, <span class="number">-1</span>), (<span class="number">1</span>, <span class="number">0</span>), (<span class="number">1</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">-1</span>),</span><br><span class="line">           (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">-1</span>, <span class="number">-1</span>), (<span class="number">-1</span>, <span class="number">0</span>), (<span class="number">-1</span>, <span class="number">1</span>))</span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> dq:</span><br><span class="line">        tmp = dq.popleft()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> dxy:</span><br><span class="line">            tx = tmp[<span class="number">0</span>] + i[<span class="number">0</span>]</span><br><span class="line">            ty = tmp[<span class="number">1</span>] + i[<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="keyword">if</span> graph[tx][ty] == curr <span class="keyword">and</span> <span class="keyword">not</span> visit[tx][ty]:</span><br><span class="line">                    graph[tx][ty] = change_to</span><br><span class="line">                    dq.append((tx, ty))</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> bg <span class="keyword">and</span> graph[tx][ty] == <span class="string">'0'</span>:</span><br><span class="line">                    bfs_fill(tx, ty, <span class="string">'0'</span>, <span class="string">'💩'</span>, graph, visit)</span><br><span class="line">                    cnt += <span class="number">1</span></span><br><span class="line">            <span class="keyword">except</span> IndexError:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    kase = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        H, W = map(int, input().split())</span><br><span class="line">        <span class="keyword">if</span> H == <span class="number">0</span> <span class="keyword">and</span> W == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        W *= <span class="number">4</span></span><br><span class="line">        graph = []</span><br><span class="line">        visit = [[<span class="keyword">False</span>] * (W + <span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(H + <span class="number">2</span>)]</span><br><span class="line">        graph.append(list(<span class="string">'0'</span> * (W + <span class="number">2</span>)))</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(H):</span><br><span class="line">            graph.append(list(<span class="string">'0'</span> + str(bin(int(input(), <span class="number">16</span>))</span><br><span class="line">                                        [<span class="number">2</span>:].rjust(W, <span class="string">'0'</span>)) + <span class="string">'0'</span>))</span><br><span class="line"></span><br><span class="line">        graph.append(list(<span class="string">'0'</span> * (W + <span class="number">2</span>)))</span><br><span class="line">        bfs_fill(<span class="number">0</span>, <span class="number">0</span>, <span class="string">'0'</span>, <span class="string">'💩'</span>, graph, visit, <span class="keyword">True</span>)</span><br><span class="line">        cnt = [<span class="number">0</span>] * <span class="number">6</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(H + <span class="number">2</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(W + <span class="number">2</span>):</span><br><span class="line">                <span class="keyword">if</span> graph[i][j] == <span class="string">'1'</span>:</span><br><span class="line">                    cnt[bfs_fill(i, j, <span class="string">'1'</span>, <span class="string">'🍔'</span>, graph, visit)] += <span class="number">1</span></span><br><span class="line">        print(<span class="string">"Case &#123;&#125;: &#123;&#125;"</span>.format(kase,</span><br><span class="line">                                   <span class="string">'A'</span> * cnt[<span class="number">1</span>] + <span class="string">'D'</span> * cnt[<span class="number">5</span>] +</span><br><span class="line">                                   <span class="string">'J'</span> * cnt[<span class="number">3</span>] + <span class="string">'K'</span> * cnt[<span class="number">2</span>] +</span><br><span class="line">                                   <span class="string">'S'</span> * cnt[<span class="number">4</span>] + <span class="string">'W'</span> * cnt[<span class="number">0</span>]))</span><br><span class="line">        kase += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+  </div>
+  <div class="post-footer">the end</div>
+</article>
+
+          
+  <nav class="pagination post-nav">
+    
+      <a href="/2017/12/24/UVA-11094-Continents/">
+        <span class="prev-post"><i class="fas fa-angle-left"></i>[UVA] 11094 - Continents</span>
+      </a>
+    
+    
+      <a href="/2017/12/24/UVA-12442-Forwarding-Emails/">
+        <span class="next-post">[UVA] 12442 - Forwarding Emails<i class="fas fa-angle-right"></i></span>
+      </a>
+    
+  </nav>
+
+
+          
+  
+  <div id="disqus_thread"></div>
+<script>
+    var shortName = 'summon528'
+    var disqus_config = function () {
+     this.page.url = 'https://summon528.github.io/2017/12/24/UVA-1103-Ancient-Messages/';  // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = 'post'+'-2017/12/24/UVA-1103-Ancient-Messages/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//'+shortName+'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<script id="dsq-count-scr" src="//summon528.disqus.com/count.js" async></script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+
+      </main>
+    </div>
+    <footer>
+      <div class="social-links">
+        
+          
+        
+          
+        
+          
+            <a href="https://github.com/summon528"><i class="fab fa-github"></i></a>
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.facebook.com/ChangYenTseng"><i class="fab fa-facebook"></i></a>
+          
+        
+          
+            <a href="https://twitter.com/summon528"><i class="fab fa-twitter"></i></a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.reddit.com/user/Summon528/"><i class="fab fa-reddit"></i></a>
+          
+        
+        
+          <a href="/atom.xml"><i class="fas fa-rss"></i></a>
+        
+      </div>
+      
+        <div class="quote">
+          <p>我肚子餓了，我想要去吃宵夜. ——睦樂 李</p>
+        </div>
+      
+      <div class="copyright">
+        <p>
+          由 <a href="https://hexo.io/">Hexo</a> 強力驅動
+          <span>|</span>
+          主題 - <a href="https://github.com/wa-ri/hexo-theme-ztopic">ztopic</a
+        </p>
+        <p>
+          <span>
+          
+          &copy;
+          
+            2018
+          
+          </span>
+          <i class="fas fa-circle"></i>
+          <span>Cody Tseng</span>
+        </p>
+      </div>
+</footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="fas fa-angle-double-up"></i>
+    </div>
+  </div>
+  <div id="mobile-nav">
+  <nav id="mobile-nav-menu">
+    <div class="awesomplete">
+      <input placeholder="Search" onclick="initSearch();" id="mobile-search" autocomplete="off" aria-owns="awesomplete_list_1" role="combobox">
+      <ul role="listbox" id="awesomplete_list_1" hidden=""></ul>
+    </div>
+    
+        
+        <li class="menu-item">
+          <a href="/" class="mobile-nav-link"><i class="fas fa-home"></i>首頁</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/archives" class="mobile-nav-link"><i class="fas fa-archive"></i>列表</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/tags" class="mobile-nav-link"><i class="fas fa-tags"></i>標籤</a>
+        </li>
+      
+    
+      
+        <li class="menu-item">
+          <a href="/about" class="mobile-nav-link"><i class="fas fa-info-circle"></i>關於</a>
+        </li>
+      
+    
+    <div class="mobile-intro">practice makes perfect</div>
+  </nav>
+</div>
+
+
+  <script src="/libs/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="/libs/slideout/slideout.min.js"></script>
+  
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css">
+    <script src="/libs/fancybox/jquery.fancybox.pack.js"></script>
+  
+  
+
+  <script src="/js/ztopic.js"></script>
+  <script src="/js/concrete.js"></script>
+  <script src="/js/awesomplete.js"></script>
+  <script src="/js/copy.js"></script>
+</body>
+</html>

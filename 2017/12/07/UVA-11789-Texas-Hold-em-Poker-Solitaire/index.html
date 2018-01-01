@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#34495e">
+  <title>[UVA] 11789 - Texas Hold&#39;em Poker Solitaire | 水泥城式</title>
+  <link rel="alternate" href="path/of/rss" type="application/atom+xml">
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/awesomplete.css">
+  
+
+  
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108414747-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108414747-2');
+    </script>
+
+
+
+  
+
+  
+
+</head>
+
+<body>
+  <div class="mobile-header">
+    <span><i class="far fa-dot-circle" id="mobile-nav-toggle"></i></span>
+    <div class="mobile-logo">
+      <a href="/.">Concrete</a>
+    </div>
+  </div>
+  <div class="page" id="mobile-nav-panel">
+    <div class="container">
+      <header class="site-nav">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="/">Concrete</a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li style="margin:0;">
+              <input placeholder="Search" onclick="initSearch();" id="search">
+            </li>
+            
+                
+                <li class="menu-item">
+                  <a href="/" class="menu-item-link"><i class="fas fa-home"></i>首頁</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/archives" class="menu-item-link"><i class="fas fa-archive"></i>列表</a>
+                </li>
+              
+            
+                
+                <li class="menu-item">
+                  <a href="/tags" class="menu-item-link"><i class="fas fa-tags"></i>標籤</a>
+                </li>
+              
+            
+              
+                <li class="menu-item">
+                  <a href="/about" class="menu-item-link"><i class="fas fa-info-circle"></i>關於</a>
+                </li>
+              
+            
+          </ul>
+        </nav>
+      </div>
+</header>
+
+      <div class="banner">
+  <div class="show">
+    <!-- <img src="/" alt="banner"> -->
+    <div class="banner-title">
+      
+        <div class="post-title">
+          [UVA] 11789 - Texas Hold&#39;em Poker Solitaire
+            <div class="post-tags">
+    		    
+              <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/Texas/">Texas</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+            
+    	      </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+      <main class="main"id="main">
+          <article class="post">
+  
+
+  <header>
+    <div class="post-title mobile-post-title">
+      <h1>[UVA] 11789 - Texas Hold&#39;em Poker Solitaire</h1>
+        <div class="post-tags">
+        
+          <a class="tag-link" href="/tags/Cpp/">Cpp</a> <a class="tag-link" href="/tags/Texas/">Texas</a> <a class="tag-link" href="/tags/UVA/">UVA</a>
+        
+        </div>
+    </div>
+    <div class="post-meta">
+      <span class="post-time"><i class="fas fa-calendar"></i>2017-12-07</span>
+      
+      <!----------------------------------->
+        
+      <!----------------------------------->
+    </div>
+  </header>
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">目錄</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#出處"><span class="toc-text">出處</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#題意"><span class="toc-text">題意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#程式碼"><span class="toc-text">程式碼</span></a></li></ol>
+    </div>
+  </div>
+
+
+  <div class="post-content">
+    <h3 id="出處"><a href="#出處" class="headerlink" title="出處"></a>出處</h3><p><a href="https://uva.onlinejudge.org/index.php?option=nlinejudge&amp;category=117&amp;page=show_problem&amp;problem=2889" target="_blank" rel="noopener">https://uva.onlinejudge.org/index.php?option=nlinejudge&amp;category=117&amp;page=show_problem&amp;problem=2889</a></p>
+<h3 id="題意"><a href="#題意" class="headerlink" title="題意"></a>題意</h3><p>給一個7*7的矩陣<br>每條直線，橫線、對角線的7張中，尋找能產生最大手牌的5張<br>求最大的線是哪一條，和那5張牌是什麼  </p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>暴力枚舉所有直線，橫線、對角線<br>在暴力枚舉7張中不要的兩張<br>輸出最大的，注意輸出的順序不要亂掉<br><a id="more"></a></p>
+<h3 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">card</span> &#123;</span>  <span class="comment">//卡片類別</span></span><br><span class="line">   <span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> num;     <span class="comment">//數字</span></span><br><span class="line">    <span class="keyword">char</span> suit;   <span class="comment">//花色</span></span><br><span class="line">    <span class="built_in">string</span> raw;  <span class="comment">//原始字串</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">    card(<span class="built_in">string</span> s) &#123;      <span class="comment">//建構子</span></span><br><span class="line">        raw = s;          <span class="comment">//複製原始字串</span></span><br><span class="line">        suit = s[<span class="number">1</span>];      <span class="comment">//花色</span></span><br><span class="line">        <span class="keyword">if</span> (s[<span class="number">0</span>] == <span class="string">'T'</span>)  <span class="comment">//判斷數字</span></span><br><span class="line">            num = <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (s[<span class="number">0</span>] == <span class="string">'J'</span>)</span><br><span class="line">            num = <span class="number">11</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (s[<span class="number">0</span>] == <span class="string">'Q'</span>)</span><br><span class="line">            num = <span class="number">12</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (s[<span class="number">0</span>] == <span class="string">'K'</span>)</span><br><span class="line">            num = <span class="number">13</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (s[<span class="number">0</span>] == <span class="string">'A'</span>)</span><br><span class="line">            num = <span class="number">14</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            num = s[<span class="number">0</span>] - <span class="string">'0'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&gt;(<span class="keyword">const</span> card&amp; other) &#123;  <span class="comment">//重載 &gt; 運算</span></span><br><span class="line">        <span class="keyword">if</span> (num == other.num) &#123;</span><br><span class="line">            <span class="keyword">return</span> suit &gt; other.suit;  <span class="comment">//若數字一樣比較花色</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> num &gt; other.num;  <span class="comment">//比較數字</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>!=(<span class="keyword">const</span> card&amp; other) &#123;  <span class="comment">//重載 != 運算</span></span><br><span class="line">        <span class="keyword">return</span> num != other.num || suit != other.suit;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">friend</span> ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> card&amp; cd);</span><br><span class="line">    <span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">hand</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> <span class="built_in">vector</span>&lt;card&gt;&amp; v) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> i : v) os &lt;&lt; i &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">    <span class="keyword">return</span> os;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">hand</span> &#123;</span>  <span class="comment">//手牌類別</span></span><br><span class="line">   <span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;card&gt;&gt; h;  <span class="comment">//手牌</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;card&gt; raw;</span><br><span class="line">    <span class="keyword">bool</span> flush, straight;  <span class="comment">//同花、順子</span></span><br><span class="line">    <span class="keyword">int</span> win;               <span class="comment">//牌種類</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">    hand() &#123; win = <span class="number">-1</span>; &#125;;  <span class="comment">//預設-1</span></span><br><span class="line">    hand(<span class="built_in">vector</span>&lt;card&gt; v) &#123;</span><br><span class="line">        raw = v;</span><br><span class="line">        flush = straight = <span class="literal">true</span>;  <span class="comment">//當作都是同花順</span></span><br><span class="line">        <span class="comment">//由大到小排序手牌</span></span><br><span class="line">        sort(begin(v), end(v), [](card&amp; a, card&amp; b) &#123; <span class="keyword">return</span> a &gt; b; &#125;);</span><br><span class="line">        <span class="comment">//判斷A要當作1的特例</span></span><br><span class="line">        <span class="keyword">if</span> (v[<span class="number">0</span>].num == <span class="number">14</span> &amp;&amp; v[<span class="number">1</span>].num == <span class="number">5</span> &amp;&amp; v[<span class="number">2</span>].num == <span class="number">4</span> &amp;&amp; v[<span class="number">3</span>].num == <span class="number">3</span> &amp;&amp;</span><br><span class="line">            v[<span class="number">4</span>].num == <span class="number">2</span>) &#123;</span><br><span class="line">            v[<span class="number">0</span>].num = <span class="number">1</span>;</span><br><span class="line">            sort(begin(v), end(v), [](card&amp; a, card&amp; b) &#123; <span class="keyword">return</span> a &gt; b; &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> last_suit = v[<span class="number">0</span>].suit,</span><br><span class="line">            last_num = v[<span class="number">0</span>].num + <span class="number">1</span>;  <span class="comment">//紀錄上一個花色、數字</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; i : v) &#123;</span><br><span class="line">            <span class="comment">//花色與上次不同非同花</span></span><br><span class="line">            <span class="keyword">if</span> (last_suit != i.suit) flush = <span class="literal">false</span>;</span><br><span class="line">            <span class="comment">//數字非上次的-1 非順子</span></span><br><span class="line">            <span class="keyword">if</span> (last_num != i.num + <span class="number">1</span>) straight = <span class="literal">false</span>;</span><br><span class="line">            last_suit = i.suit, last_num = i.num;</span><br><span class="line">            <span class="keyword">bool</span> pushed = <span class="literal">false</span>;</span><br><span class="line">            <span class="comment">//把數字相同的疊在同一推</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; j : h) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i.num == j[<span class="number">0</span>].num) &#123;</span><br><span class="line">                    j.push_back(i);</span><br><span class="line">                    pushed = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//跟原本的都不一樣做一個新的堆</span></span><br><span class="line">            <span class="keyword">if</span> (!pushed) &#123;</span><br><span class="line">                <span class="built_in">vector</span>&lt;card&gt; tmp;</span><br><span class="line">                tmp.push_back(i);</span><br><span class="line">                h.push_back(tmp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//用每堆的張數stable_sort 保持原先排大到小的順序</span></span><br><span class="line">        stable_sort(begin(h), end(h), [](<span class="built_in">vector</span>&lt;card&gt; a, <span class="built_in">vector</span>&lt;card&gt; b) &#123;</span><br><span class="line">            <span class="keyword">return</span> a.size() &gt; b.size();</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">//尋找最大排型</span></span><br><span class="line">        win = <span class="number">0</span>;                                            <span class="comment">//非洲人牌運</span></span><br><span class="line">        <span class="keyword">if</span> (h[<span class="number">0</span>].size() == <span class="number">2</span>) win = <span class="number">1</span>;                      <span class="comment">//對子</span></span><br><span class="line">        <span class="keyword">if</span> (h[<span class="number">0</span>].size() == <span class="number">2</span> &amp;&amp; h[<span class="number">1</span>].size() == <span class="number">2</span>) win = <span class="number">2</span>;  <span class="comment">//兩對</span></span><br><span class="line">        <span class="keyword">if</span> (h[<span class="number">0</span>].size() == <span class="number">3</span>) win = <span class="number">3</span>;                      <span class="comment">//三條</span></span><br><span class="line">        <span class="keyword">if</span> (straight) win = <span class="number">4</span>;                              <span class="comment">//順子</span></span><br><span class="line">        <span class="keyword">if</span> (flush) win = <span class="number">5</span>;                                 <span class="comment">//同花</span></span><br><span class="line">        <span class="keyword">if</span> (h[<span class="number">0</span>].size() == <span class="number">3</span> &amp;&amp; h[<span class="number">1</span>].size() == <span class="number">2</span>) win = <span class="number">6</span>;  <span class="comment">//葫蘆</span></span><br><span class="line">        <span class="keyword">if</span> (h[<span class="number">0</span>].size() == <span class="number">4</span>) win = <span class="number">7</span>;                      <span class="comment">//鐵支</span></span><br><span class="line">        <span class="keyword">if</span> (flush &amp;&amp; straight) win = <span class="number">8</span>;                     <span class="comment">//牛B牌</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> hand&amp; other)</span> </span>&#123;  <span class="comment">//判斷兩手牌大小 不考慮花色 相同回傳2</span></span><br><span class="line">        <span class="keyword">if</span> (win == other.win) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; h.size(); i++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; h[i].size(); j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (h[i][j].num != other.h[i][j].num)</span><br><span class="line">                        <span class="keyword">return</span> h[i][j].num &gt; other.h[i][j].num;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> win &gt; other.win;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&gt;(<span class="keyword">const</span> hand&amp; other) &#123; <span class="keyword">return</span> win &gt; other.win; &#125;</span><br><span class="line">    <span class="keyword">friend</span> ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> hand&amp; hd);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定義cout&lt;&lt;card</span></span><br><span class="line">ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> card&amp; cd) &#123;</span><br><span class="line">    os &lt;&lt; cd.raw;</span><br><span class="line">    <span class="keyword">return</span> os;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定義cout&lt;&lt;hand</span></span><br><span class="line">ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> hand&amp; hd) &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="built_in">string</span> win_type[<span class="number">9</span>] = &#123;</span><br><span class="line">        <span class="string">"High Cards"</span>,      <span class="string">"One Pair"</span>,       <span class="string">"Two Pair"</span>,</span><br><span class="line">        <span class="string">"Three of a Kind"</span>, <span class="string">"Straight"</span>,       <span class="string">"Flush"</span>,</span><br><span class="line">        <span class="string">"Full House"</span>,      <span class="string">"Four of a Kind"</span>, <span class="string">"Straight Flush"</span>&#125;;</span><br><span class="line">    os &lt;&lt; hd.raw &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">    os &lt;&lt; win_type[hd.win];</span><br><span class="line">    <span class="keyword">return</span> os;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">hand <span class="title">bestof7</span><span class="params">(<span class="built_in">vector</span>&lt;card&gt; cards)</span> </span>&#123;</span><br><span class="line">    hand best;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">6</span>; i &gt; <span class="number">0</span>; i--) &#123;  <span class="comment">//枚舉兩張不要的</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;card&gt; tmp;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">7</span>; k++) &#123;  <span class="comment">//製作一個5張的手牌</span></span><br><span class="line">                <span class="keyword">if</span> (k != i &amp;&amp; k != j) tmp.push_back(cards[k]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function">hand <span class="title">hd</span><span class="params">(tmp)</span></span>;</span><br><span class="line">            <span class="keyword">if</span> (hd.cmp(best) == <span class="number">1</span>) best = hd;  <span class="comment">//儲存較大的手牌</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> best;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span> (T--) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;card&gt;&gt; v(<span class="number">7</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">7</span>; j++) &#123;</span><br><span class="line">                <span class="built_in">string</span> tmp;</span><br><span class="line">                <span class="built_in">cin</span> &gt;&gt; tmp;</span><br><span class="line">                v[i].push_back(card(tmp));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        hand best;</span><br><span class="line">        <span class="built_in">vector</span>&lt;card&gt; best1, best2;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">            hand best_this = bestof7(v[i]);</span><br><span class="line">            <span class="keyword">if</span> (best_this.cmp(best) == <span class="number">1</span>) &#123;</span><br><span class="line">                best = best_this;</span><br><span class="line">                best1 = v[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;card&gt; tmp;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">7</span>; j++) tmp.push_back(v[j][i]);</span><br><span class="line">            hand best_this = bestof7(tmp);</span><br><span class="line">            <span class="keyword">if</span> (best_this.cmp(best) == <span class="number">1</span>) &#123;</span><br><span class="line">                best = best_this;</span><br><span class="line">                best1 = tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">vector</span>&lt;card&gt; tmp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">7</span>; j++) tmp.push_back(v[j][j]);</span><br><span class="line">        hand best_this = bestof7(tmp);</span><br><span class="line">        <span class="keyword">if</span> (best_this.cmp(best) == <span class="number">1</span>) &#123;</span><br><span class="line">            best = best_this;</span><br><span class="line">            best1 = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        tmp.clear();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">7</span>; j++) tmp.push_back(v[<span class="number">6</span> - j][j]);</span><br><span class="line">        best_this = bestof7(tmp);</span><br><span class="line">        <span class="keyword">if</span> (best_this.cmp(best) == <span class="number">1</span>) &#123;</span><br><span class="line">            best = best_this;</span><br><span class="line">            best1 = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; best1 &lt;&lt; <span class="string">' '</span> &lt;&lt; best &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+  </div>
+  <div class="post-footer">the end</div>
+</article>
+
+          
+  <nav class="pagination post-nav">
+    
+      <a href="/2017/12/07/UVA-11566-Let-s-Yum-Cha/">
+        <span class="prev-post"><i class="fas fa-angle-left"></i>[UVA] 11566 - Let&#39;s Yum Cha!</span>
+      </a>
+    
+    
+      <a href="/2017/12/07/UVA-131-The-Psychic-Poker-Player/">
+        <span class="next-post">[UVA] 131 - The Psychic Poker Player<i class="fas fa-angle-right"></i></span>
+      </a>
+    
+  </nav>
+
+
+          
+  
+  <div id="disqus_thread"></div>
+<script>
+    var shortName = 'summon528'
+    var disqus_config = function () {
+     this.page.url = 'https://summon528.github.io/2017/12/07/UVA-11789-Texas-Hold-em-Poker-Solitaire/';  // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = 'post'+'-2017/12/07/UVA-11789-Texas-Hold-em-Poker-Solitaire/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//'+shortName+'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<script id="dsq-count-scr" src="//summon528.disqus.com/count.js" async></script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+
+      </main>
+    </div>
+    <footer>
+      <div class="social-links">
+        
+          
+        
+          
+        
+          
+            <a href="https://github.com/summon528"><i class="fab fa-github"></i></a>
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.facebook.com/ChangYenTseng"><i class="fab fa-facebook"></i></a>
+          
+        
+          
+            <a href="https://twitter.com/summon528"><i class="fab fa-twitter"></i></a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="https://www.reddit.com/user/Summon528/"><i class="fab fa-reddit"></i></a>
+          
+        
+        
+          <a href="/atom.xml"><i class="fas fa-rss"></i></a>
+        
+      </div>
+      
+        <div class="quote">
+          <p>我肚子餓了，我想要去吃宵夜. ——睦樂 李</p>
+        </div>
+      
+      <div class="copyright">
+        <p>
+          由 <a href="https://hexo.io/">Hexo</a> 強力驅動
+          <span>|</span>
+          主題 - <a href="https://github.com/wa-ri/hexo-theme-ztopic">ztopic</a
+        </p>
+        <p>
+          <span>
+          
+          &copy;
+          
+            2018
+          
+          </span>
+          <i class="fas fa-circle"></i>
+          <span>Cody Tseng</span>
+        </p>
+      </div>
+</footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="fas fa-angle-double-up"></i>
+    </div>
+  </div>
+  <div id="mobile-nav">
+  <nav id="mobile-nav-menu">
+    <div class="awesomplete">
+      <input placeholder="Search" onclick="initSearch();" id="mobile-search" autocomplete="off" aria-owns="awesomplete_list_1" role="combobox">
+      <ul role="listbox" id="awesomplete_list_1" hidden=""></ul>
+    </div>
+    
+        
+        <li class="menu-item">
+          <a href="/" class="mobile-nav-link"><i class="fas fa-home"></i>首頁</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/archives" class="mobile-nav-link"><i class="fas fa-archive"></i>列表</a>
+        </li>
+      
+    
+        
+        <li class="menu-item">
+          <a href="/tags" class="mobile-nav-link"><i class="fas fa-tags"></i>標籤</a>
+        </li>
+      
+    
+      
+        <li class="menu-item">
+          <a href="/about" class="mobile-nav-link"><i class="fas fa-info-circle"></i>關於</a>
+        </li>
+      
+    
+    <div class="mobile-intro">practice makes perfect</div>
+  </nav>
+</div>
+
+
+  <script src="/libs/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="/libs/slideout/slideout.min.js"></script>
+  
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css">
+    <script src="/libs/fancybox/jquery.fancybox.pack.js"></script>
+  
+  
+
+  <script src="/js/ztopic.js"></script>
+  <script src="/js/concrete.js"></script>
+  <script src="/js/awesomplete.js"></script>
+  <script src="/js/copy.js"></script>
+</body>
+</html>
